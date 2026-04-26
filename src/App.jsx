@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { act, useState } from "react";
 import logo from "/logo.png";
 import sekolah from "/sekolah.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+const [activeDropdown, setActiveDropdown] = useState(null);
 
   return (
     <>
@@ -59,7 +59,7 @@ const Navbar = () => {
 
             <li className="relative text-left w-full md:w-auto">
               <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                onClick={() => setActiveDropdown(!activeDropdown === "tentang" ? null : "tentang")}
                 className="flex items-center justify-between w-full py-2 hover:text-blue-200 border-b border-blue-400/30 md:border-none"
               >
                 Tentang kami
@@ -68,7 +68,7 @@ const Navbar = () => {
                 </svg>
               </button>
 
-              <div className={`${isDropdownOpen ? "block" : "hidden"} md:absolute md:bg-white md:text-gray-800 md:shadow-xl md:rounded-lg md:w-44 md:mt-2 mt-2 space-y-0 pl-4 md:pl-0`}>
+              <div className={`${activeDropdown === "tentang" ? "block" : "hidden"} md:absolute md:bg-white md:text-gray-800 md:shadow-xl md:rounded-lg md:w-44 md:mt-2 mt-2 space-y-0 pl-4 md:pl-0`}>
                 <a href="#" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">Profil Sekolah</a>
                 <a href="#" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">Struktur Organisasi</a>
                 <a href="#" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">Visi Misi</a>
@@ -79,7 +79,7 @@ const Navbar = () => {
 
             <li className="relative text-left w-full md:w-auto">
               <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                onClick={() => setActiveDropdown(!activeDropdown=== "kelas" ? null : "kelas")}
                 className="flex items-center justify-between w-full py-2 hover:text-blue-200 border-b border-blue-400/30 md:border-none"
               >
                 Kelas
@@ -88,12 +88,12 @@ const Navbar = () => {
                 </svg>
               </button>
 
-              <div className={`${isDropdownOpen ? "block" : "hidden"} md:absolute md:bg-white md:text-gray-800 md:shadow-xl md:rounded-lg md:w-44 md:mt-2 mt-2 space-y-0 pl-4 md:pl-0`}>
+              <div className={`${activeDropdown === "kelas" ? "block" : "hidden"} md:absolute md:bg-white md:text-gray-800 md:shadow-xl md:rounded-lg md:w-24 md:mt-2 mt-2 space-y-0 pl-4 md:pl-0`}>
                 <a href="#" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">A1</a>
                 <a href="#" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">A2</a>
                 <a href="#" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">A3</a>
                 <a href="#" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">B1</a>
-                <a href="#" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">N2</a>
+                <a href="#" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">B2</a>
               </div>
             </li>
 
@@ -111,7 +111,7 @@ const Navbar = () => {
 
 
     {/* isi halaman */}
-    <section className="w-full bg-[#3266CC] pt-[112px] pb-10">
+    <section className="w-full bg-[#3266CC] pt-[112px] pb-32 rounded-[20px] ">
       
       <div className="max-w-screen-xl mx-auto px-4 md:px-6">
         
@@ -122,7 +122,7 @@ const Navbar = () => {
             src={sekolah} 
             alt="Gedung Sekolah" 
             /* object-top memastikan atap gedung tidak kepotong navbar */
-            className="w-full h-full object-cover object-center block"
+            className="w-full h-full object-top object-cover object-contain object-center block"
           />
 x
           {/* Overlay dan Teks */}
