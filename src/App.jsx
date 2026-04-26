@@ -1,6 +1,9 @@
 import { act, useState } from "react";
 import logo from "/logo.png";
 import sekolah from "/sekolah.png";
+import kepalaskl from "/foto kepala sekolah paud.png"
+
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,7 +62,7 @@ const [activeDropdown, setActiveDropdown] = useState(null);
 
             <li className="relative text-left w-full md:w-auto">
               <button
-                onClick={() => setActiveDropdown(!activeDropdown === "tentang" ? null : "tentang")}
+                onClick={() => setActiveDropdown(activeDropdown === "tentang" ? null : "tentang")}
                 className="flex items-center justify-between w-full py-2 hover:text-blue-200 border-b border-blue-400/30 md:border-none"
               >
                 Tentang kami
@@ -79,7 +82,7 @@ const [activeDropdown, setActiveDropdown] = useState(null);
 
             <li className="relative text-left w-full md:w-auto">
               <button
-                onClick={() => setActiveDropdown(!activeDropdown=== "kelas" ? null : "kelas")}
+                onClick={() =>  setActiveDropdown(activeDropdown === "kelas" ? null : "kelas")}
                 className="flex items-center justify-between w-full py-2 hover:text-blue-200 border-b border-blue-400/30 md:border-none"
               >
                 Kelas
@@ -109,9 +112,8 @@ const [activeDropdown, setActiveDropdown] = useState(null);
       </div>
     </nav>
 
-
     {/* isi halaman */}
-    <section className="w-full bg-[#3266CC] pt-[112px] pb-32 rounded-[20px] ">
+    <section className="w-full bg-[#3266CC] pt-[130px] pb-32 rounded-[20px]">
       
       <div className="max-w-screen-xl mx-auto px-4 md:px-6">
         
@@ -137,7 +139,53 @@ x
 
         </div>
       </div>
+
+      <div className="max-w-screen-xl py-16 mx-auto px-6">
+  
+  {/* Container Utama menggunakan items-start */}
+  <div className="flex flex-col md:flex-row items-start gap-10">
+    
+    {/* KIRI: FOTO */}
+    <div className="flex flex-col items-center text-center md:w-1/3 w-full">
+      <img
+        src={kepalaskl}
+        alt="Kepala Sekolah"
+        className="w-72 h-96 object-cover rounded-tl-[100px] rounded-br-[10px] bg-white shadow-lg mb-4"
+      />
+      <h3 className="text-xl text-white font-bold">Cahaya M.pd</h3>
+      <p className="text-white">Kepala Sekolah Paud Negeri Tamalate</p>
+    </div>
+
+    {/* KANAN: JUDUL + TEKS */}
+    <div className="md:w-2/3 text-white">
+      {/* Judul ditaruh di sini agar di desktop dia di samping foto */}
+      {/* text-center di mobile, text-left di desktop */}
+      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center md:text-left uppercase tracking-wide">
+        Sambutan Kepala Sekolah
+      </h2>
+
+      <div className="text-justify space-y-4">
+        <p>
+        Selamat datang di website resmi PAUD Negeri Tamalate. Kami hadir sebagai jendela informasi bagi orang tua dan masyarakat untuk mengenal lebih dekat lingkungan belajar kami. Masa usia dini adalah masa emas (Golden Age) yang sangat krusial, dan kami berkomitmen untuk mendampingi tumbuh kembang anak dengan penuh kasih sayang, keceriaan, dan dedikasi tinggi.
+        </p>
+        <p>
+        Di PAUD Negeri Tamalate, kami menerapkan metode belajar sambil bermain yang dirancang untuk menggali potensi unik setiap anak. Fokus kami bukan hanya pada kecerdasan kognitif, tetapi juga pada pembentukan karakter, kemandirian, dan penanaman nilai-nilai moral sejak dini. Kami ingin memastikan setiap siswa merasa aman dan bahagia dalam mengeksplorasi dunia di sekitar mereka.
+        </p>
+        <p>
+        Pendidikan yang berhasil adalah hasil sinergi yang kuat antara sekolah, orang tua, dan masyarakat. Melalui platform ini, kami berharap komunikasi dapat terjalin dengan lebih baik demi masa depan putra-putri kita. Terima kasih atas kepercayaan Anda telah menitipkan pendidikan buah hati tercinta kepada kami. Mari bersama mencetak generasi yang cerdas, ceria, dan berkarakter.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
     </section>
+    
+
+
+    <div className="bg-white w-full pb-100"></div>
+    
   </>
   );
 };
