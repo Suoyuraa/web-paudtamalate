@@ -11,7 +11,7 @@ const VisiMisi = () => {
     <div className="bg-white min-h-screen pt-28">
       
       {/* 1. HERO SECTION (Header dengan Background) */}
-      <div className="relative h-[250px] md:h-[350px] py-[113px] w-full overflow-hidden bg-slate-900">
+      <div className="relative h-[400px] md:h-[350px] py-[113px] w-full overflow-hidden bg-slate-900">
         <img 
           src={mainan} 
           alt="Background Visi Misi" 
