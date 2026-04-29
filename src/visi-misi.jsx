@@ -1,5 +1,5 @@
 import React from 'react';
-import sekolah from '/sekolah.png';
+import sekolah from '/paud.jpeg';
 import mainan from '/tempat bermain.png';
 
 const VisiMisi = () => {

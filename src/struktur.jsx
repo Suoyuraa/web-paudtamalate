@@ -11,7 +11,7 @@ const StructurePage = () => {
     <div className="bg-white min-h-screen pt-[112px]">
       
       {/* SECTION HERO (FOTO GURU) */}
-      <div className="relative h-[400px] md:h-[350px] py w-full overflow-hidden bg-gray-900">
+      <div className="relative h-[400px] md:h-[350px] py-[113px] w-full overflow-hidden bg-slate-900">
         {/* Foto Otomatis ke tengah & Menyesuaikan Bentuk */}
         <img 
           src={guru} 

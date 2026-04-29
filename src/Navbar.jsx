@@ -110,6 +110,10 @@ const Navbar = () => {
                   Kegiatan
                 </Link>
 
+                <Link to="/Guru" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">
+                  Guru
+                </Link>
+
               </div>
             </li>
 
