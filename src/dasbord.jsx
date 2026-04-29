@@ -61,7 +61,7 @@ const Dasbord = () => {
             /* object-top memastikan atap gedung tidak kepotong navbar */
             className="w-full h-full object-top object-cover object-contain object-center block"
           />
-x
+
           {/* Overlay dan Teks */}
           <div className="absolute inset-0 bg-black/30 flex flex-col justify-center p-8 md:p-20">
              <h1 className="text-white text-3xl md:text-5xl font-bold max-w-lg" >

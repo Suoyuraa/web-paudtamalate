@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import guru from '/Foto guru.png';
+import guru from '/foto_guru.png';
 import struktur from "/struktur organisasi.jpeg";
 
 const StructurePage = () => {
@@ -11,7 +11,7 @@ const StructurePage = () => {
     <div className="bg-white min-h-screen pt-[112px]">
       
       {/* SECTION HERO (FOTO GURU) */}
-      <div className="relative h-[400px] md:h-[350px] py-[113px] w-full overflow-hidden bg-slate-900">
+      <div className="relative h-[400px] md:h-[550px] py-[113px] w-full overflow-hidden bg-slate-900">
         {/* Foto Otomatis ke tengah & Menyesuaikan Bentuk */}
         <img 
           src={guru} 
