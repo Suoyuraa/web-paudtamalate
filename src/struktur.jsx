@@ -1,27 +1,25 @@
 import React, { useState } from 'react';
-import Navbar from './Navbar';
+import guru from '/Foto guru.png';
+import struktur from "/struktur organisasi.jpeg";
 
 const StructurePage = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Ganti URL ini dengan path gambar aslimu
-  const imgHero = "url_foto_guru_kamu.jpg";
-  const imgStruktur = "url_gambar_struktur_organisasi.png";
 
   return (
 
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen pt-[112px]">
       
       {/* SECTION HERO (FOTO GURU) */}
-      <div className="relative h-[400px] w-full overflow-hidden bg-gray-900">
+      <div className="relative h-[400px]  py w-full overflow-hidden bg-gray-900">
         {/* Foto Otomatis ke tengah & Menyesuaikan Bentuk */}
         <img 
-          src={imgHero} 
+          src={guru} 
           alt="Guru PAUD" 
           className="absolute inset-0 w-full h-full object-cover object-center opacity-60"
         />
         {/* Overlay Tulisan */}
-        <div className="relative z-10 flex flex-col justify-center h-full px-8 md:px-24 text-white">
+        <div className="relative z-10 flex flex-col max-w-7xl px-6 md:px-24 mx-auto justify-center h-full px-8 md:px-24 flex flex-col justify-center text-white">
           <h1 className="text-4xl md:text-5xl font-bold">Struktur Sekolah</h1>
           <p className="text-lg mt-2 opacity-90 capitalize">Paud negeri tamalate</p>
         </div>
@@ -34,7 +32,7 @@ const StructurePage = () => {
           onClick={() => setIsOpen(true)}
         >
           <img 
-            src={imgStruktur} 
+            src={struktur} 
             alt="Struktur Organisasi" 
             className="max-w-full h-auto"
           />
@@ -54,11 +52,11 @@ const StructurePage = () => {
               className="absolute -top-10 right-0 text-white text-3xl font-bold hover:text-gray-300"
               onClick={() => setIsOpen(false)}
             >
-              &times; Close
+              &times;
             </button>
             
             <img 
-              src={imgStruktur} 
+              src={struktur} 
               alt="Struktur Organisasi Full" 
               className="w-full h-auto rounded-lg shadow-2xl"
             />

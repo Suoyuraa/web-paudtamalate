@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Dasbord from './dasbord';
 import Footer from './Footer';
 import Struktur from './struktur';
+import Visimisi from './visi-misi';
 
 
 
@@ -15,8 +16,8 @@ function App() {
 
     <Routes>
         <Route path="/struktur" element={<Struktur />} />
-        <Route path="/dasbord" element={<Dasbord />} />
-
+        <Route path="/" element={<Dasbord />} />
+        <Route path="/visimisi" element={<Visimisi />} />
       </Routes>
    <Footer />
   </>

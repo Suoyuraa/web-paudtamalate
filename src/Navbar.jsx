@@ -90,7 +90,7 @@ const Navbar = () => {
 
               <div className={`${activeDropdown === "tentang" ? "block" : "hidden"} md:absolute md:bg-white md:text-gray-800 md:shadow-xl md:rounded-lg md:w-44 md:mt-2 mt-2 space-y-0 pl-4 md:pl-0 z-50`}>
 
-                <Link to="/dasbord" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">
+                <Link to="/" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">
                   Profil Sekolah
                 </Link>
 
@@ -98,7 +98,7 @@ const Navbar = () => {
                   Struktur Organisasi
                 </Link>
 
-                <Link to="/visi-misi" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">
+                <Link to="/Visimisi" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">
                   Visi Misi
                 </Link>
 
