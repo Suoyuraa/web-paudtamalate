@@ -59,18 +59,21 @@ const DaftarStruktur = () => {
   return (
     <>
     
-   {/* --- BAGIAN ATAS: SECTION HERO --- */}
-   <div className="relative h-[400px] md:h-[400px] w-full overflow-hidden bg-slate-900">
+    <div className="bg-white w-full min-h-screen pt-[112px] pb-10">
+      
+      {/* SECTION HERO (Fasilitas) */}
+      <div className="relative h-[400px] md:h-[350px] w-full overflow-hidden bg-slate-900">
         <img 
           src={guru} 
-          alt="Guru PAUD" 
+          alt="Background Fasilitas" 
           className="absolute inset-0 w-full h-full object-cover object-center opacity-60"
         />
-        <div className="relative z-10 flex flex-col max-w-7xl px-8 md:px-24 mx-auto justify-center h-full text-white">
-          <h1 className="text-4xl md:text-5xl font-bold">Struktur Sekolah</h1>
-          <p className="text-lg mt-2 opacity-90 capitalize">Paud Negeri Tamalate</p>
+        <div className="relative z-10 flex flex-col max-w-7xl px-6 md:px-24 mx-auto justify-center h-full text-white">
+          <h1 className="text-4xl md:text-5xl font-bold">Fasilitas</h1>
+          <p className="text-lg mt-2 opacity-90 capitalize">Paud negeri tamalate</p>
         </div>
       </div>
+
 
       {/* --- BAGIAN BAWAH: KONTEN KARTU --- */}
       <div className="bg-gray-50 min-h-screen pt-16 pb-20 px-6">
@@ -106,7 +109,7 @@ const DaftarStruktur = () => {
 
           {/* 4. KEAMANAN */}
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-800 mb-8">Keamanan</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-8">Keamanan & Kebersihan</h2>
             <div className="flex flex-wrap justify-center gap-8">
               {dataStruktur.keamanan.map((item, index) => (
                 <GuruCard key={index} {...item} />
@@ -115,6 +118,7 @@ const DaftarStruktur = () => {
           </div>
 
         </div>
+      </div>
       </div>
     </>
   );
