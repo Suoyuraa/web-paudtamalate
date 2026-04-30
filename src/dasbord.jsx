@@ -50,7 +50,7 @@ const Dasbord = () => {
         {/* isi halaman */}
     <section className="w-full bg-[#3266CC] pt-[130px] pb-14 rounded-[20px]">
       
-      <div className="max-w-screen-xl mx-auto px-4 md:px-6">
+      <div className="max-w-screen-xl mx-auto px- md:px-6">
         
         {/* Kontainer Gambar */}
         <div className="relative h-[500px] md:h-[600px] rounded-[10px] overflow-hidden shadow-2xl">

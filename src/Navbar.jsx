@@ -119,19 +119,14 @@ const Navbar = () => {
 
             {/* KELAS */}
             <li className="relative">
-              <button
-                onClick={() =>
-                  setActiveDropdown(activeDropdown === "kelas" ? null : "kelas")
-                }
-                className="flex items-center justify-between w-full py-2 hover:text-blue-200 border-b border-blue-400/30 md:border-none"
+            <Link
+                to="/Kelas"
+                className="block py-2 hover:text-blue-200 border-b border-blue-400/30 md:border-none"
               >
                 Kelas
-                <svg className={`w-4 h-4 ms-1 transition-transform ${activeDropdown === "kelas" ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 9-7 7-7-7" />
-                </svg>
-              </button>
+              </Link>
 
-              <div className={`${activeDropdown === "kelas" ? "block" : "hidden"} md:absolute md:bg-white md:text-gray-800 md:shadow-xl md:rounded-lg md:w-24 md:mt-2 mt-2 space-y-0 pl-4 md:pl-0 z-50`}>
+              {/* <div className={`${activeDropdown === "kelas" ? "block" : "hidden"} md:absolute md:bg-white md:text-gray-800 md:shadow-xl md:rounded-lg md:w-24 md:mt-2 mt-2 space-y-0 pl-4 md:pl-0 z-50`}>
 
                 <Link to="/kelas/a1" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">A1</Link>
                 <Link to="/kelas/a2" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">A2</Link>
@@ -139,7 +134,7 @@ const Navbar = () => {
                 <Link to="/kelas/b1" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">B1</Link>
                 <Link to="/kelas/b2" className="block py-2 md:px-4 hover:bg-blue-500 md:hover:bg-gray-100 rounded text-sm">B2</Link>
 
-              </div>
+              </div> */}
             </li>
 
             {/* MASUK */}
